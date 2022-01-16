@@ -1,0 +1,26 @@
+{% extends "basetemplate.html" %}
+
+{% block title %}
+Product
+{% endblock %}
+
+
+{% block content %}
+
+<h2>Talet {{ randomNumber  }}</h2>
+
+<p>Aktuell tid: {{ tid }}</p>
+
+{% if randomNumber > 200000 %}
+    <h3>Ganska stort nummer</h3>
+{% else %}    
+    <h3>litet nummer</h3>
+{% endif %}   
+
+
+
+<a href="{{ url_for('players') }}" class="btn btn-primary">Till player list</a>
+
+{% endblock %}
+
+

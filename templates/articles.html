@@ -1,0 +1,23 @@
+{% extends "basetemplate.html" %}
+
+{% block title %}
+Product
+{% endblock %}
+
+
+{% block content %}
+
+<h1>Nyheter</h1>
+
+{%  for article in allArticles  %}
+<article>
+    <header>{{ article.header  }}</header>
+    <main>{{ article.description  }}</main>
+</article>
+{%  endfor  %}
+
+<a href="{{ url_for('randomnumber') }}" class="btn btn-primary">Till random number</a>
+
+{% endblock %}
+
+
